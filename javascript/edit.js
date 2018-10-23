@@ -56,77 +56,142 @@ var units_of_measurement_map = {
 };
 
 var input_validation_map = {
-    "ActiveArea":{
+    "ACTIVE_AREA":{
 	    "pattern": "pattern='.{6,}'",
-	    "val_message": "This is a validation message for ActiveArea"
+	    "val_message": "This is a validation message for ActiveArea",
+		"unit_of_measurement":"mm"
 	},
-    "Aperture Size":{
+    "ACTIVE_AREA_DIAMETER":{ // aka Aperture Size
 	    "pattern": "pattern='.{6,}'",
-	    "val_message": "This is a validation message for Aperture Size"
+	    "val_message": "This is a validation message for Aperture Size",
+		"unit_of_measurement":"mm"
 	},
-    "Beam Diameter":{
+    "BEAM_DIAMETER":{
     	"pattern": "pattern='^[+]?[0-9]+\.[0-9]+$'", // matches floating numbers
-    	"val_message": "Must be a positive decimal number"
+    	"val_message": "Must be a positive decimal number",
+		"unit_of_measurement":"mm"
 	},
-    "Calibration Uncertainty":{
+    "UNCERTAINTY":{
     	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Calibration Uncertainty"
+    	"val_message": "This is a validation message for Calibration Uncertainty",
+		"unit_of_measurement":"%"
     },
-    "Cooling Width":{
+    "COOLING_METHOD":{
     	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Cooling Width"
+    	"val_message": "This is a validation message for Cooling Width",
+		"unit_of_measurement":"mm"
     },
-    "Laser Pulse Width":{
+    "PULSE_WIDTH":{
     	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Pulse Width"
+    	"val_message": "This is a validation message for Pulse Width",
+		"unit_of_measurement":"ns"
     },
-    "Material Thickness":{
+    "MATERIAL_THICKNESS":{
     	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Material Thickness"
+    	"val_message": "This is a validation message for Material Thickness",
+		"unit_of_measurement":"mm"
     },
-    "Max Energy":{
+    "MAX_ENERGY":{
     	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Max Energy"
+    	"val_message": "This is a validation message for Max Energy",
+		"unit_of_measurement":"J"
     },
-    "Max Power":{
+    "MAX_POWER":{
     	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Max Power"
+    	"val_message": "This is a validation message for Max Power",
+		"unit_of_measurement":"mW"
     },
-    "Max Work Area":{
+    "MAX_WORK_AREA":{
     	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Max Work Area"
+    	"val_message": "This is a validation message for Max Work Area",
+		"unit_of_measurement":"in/mm"
     },
-    "Min Energy":{
+    "MIN_ENERGY":{
     	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Min Energy"
+    	"val_message": "This is a validation message for Min Energy",
+		"unit_of_measurement":"J"
     },
-    "Min Power":{
+    "POWER_MIN":{
     	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Min Power"
+    	"val_message": "This is a validation message for Min Power",
+		"unit_of_measurement":"mW"
     },
-    "Pixel Size":{
+    "POWER_MAX":{
     	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Pixel Size"
+    	"val_message": "This is a validation message for Min Power",
+		"unit_of_measurement":"mW"
+    },	
+    "PIXEL_SIZE":{
+    	"pattern": "pattern='.{6,}'",
+    	"val_message": "This is a validation message for Pixel Size",
+		"unit_of_measurement":"&#181;m"
     },
-    "Power":{
+    "POWER":{
     	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Power"
+    	"val_message": "This is a validation message for Power",
+		"unit_of_measurement":"mW"
     },
-    "Precision":{
+    "PRECISION":{
     	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Precision"
+    	"val_message": "This is a validation message for Precision",
+		"unit_of_measurement":"&#181;m"
     },
-    "Pulse Width":{
+    "PULSE_WIDTH_MAX":{
     	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Pulse Width"
+    	"val_message": "This is a validation message for Pulse Width",
+		"unit_of_measurement":"&#181;m"
     },
-    "Repetition Rate":{
+    "REPETITION_RATE_MAX":{
     	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Repetition Rate"
+    	"val_message": "This is a validation message for Repetition Rate",
+		"unit_of_measurement":"kHz"
     },
-    "Wavelength":{
+    "WAVELENGTH":{
     	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Wavelength"
+    	"val_message": "This is a validation message for Wavelength",
+		"unit_of_measurement":"nm"
+    },
+    "PC_INTERFACE":{
+    	"pattern": "pattern='.{6,}'",
+    	"val_message": "This is a validation message for PC_INTERFACE",
+		"unit_of_measurement":""
+    },
+    "MEASUREMENT_TYPE":{
+    	"pattern": "pattern='.{6,}'",
+    	"val_message": "This is a validation message for MEASUREMENT_TYPE",
+		"unit_of_measurement":""
+    },
+    "PULSE_CW":{
+    	"pattern": "pattern='.{6,}'",
+    	"val_message": "This is a validation message for PULSE_CW",
+		"unit_of_measurement":"ns"
+    }
+	,
+    "TECHNOLOGY":{
+    	"pattern": "pattern='.{6,}'",
+    	"val_message": "This is a validation message for PULSE_CW",
+		"unit_of_measurement":"ns"
+    },
+    "Name":{
+    	"pattern": "pattern='.{6,}'",
+    	"val_message": "",
+		"unit_of_measurement":""
+    },
+    "OPERATIONMODE":{
+    	"pattern": "pattern='.{6,}'",
+    	"val_message": "This is a validation message for OPERATIONMODE",
+		"unit_of_measurement":""
+    },
+    "APPLICATIONS":{
+    	"pattern": "pattern='.{6,}'",
+    	"val_message": "This is a validation message for APPLICATIONS",
+		"unit_of_measurement":""
+    }
+	,
+    "MOTION_TYPE":{
+    	"pattern": "pattern='.{6,}'",
+    	"val_message": "This is a validation message for OPERATIONMODE",
+		"unit_of_measurement":""
     }
 }
 
@@ -231,7 +296,8 @@ function load_product(id){
 				value = '';
 			}
 
-			if( field_name_array.indexOf( key.trim()) >= 0 ){
+			//if( field_name_array.indexOf( key.trim()) >= 0 ){
+			if( typeof input_validation_map[key.trim()] !== "undefined" ){
 				switch( key.trim() ){
 					case "TECHNOLOGY":
 						input_html = '<td><select class="spec_input" name="' + spec_name + '" id="' + spec_name + '"><option selected>'+value+'</option><option>Ultrafast Oscillators</option><option>DPSS</option></select></td>';
