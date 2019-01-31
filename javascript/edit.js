@@ -34,165 +34,142 @@ var field_name_array = [
 	"WAVELENGTH"
 ];
 
-var units_of_measurement_map = {
-    "ActiveArea":"mm",
-    "Aperture Size":"mm",
-    "Beam Diameter":"mm",
-    "Calibration Uncertainty":"%",
-    "Cooling Width":"mm",
-    "Laser Pulse Width":"&#181;m",
-    "Material Thickness":"mm",
-    "Max Energy":"J",
-    "Max Power":"mW",
-    "Max Work Area":"in/mm",
-    "Min Energy":"J",
-    "Min Power":"mW",
-    "Pixel Size":"&#181;m",
-    "Power":"mW",
-    "Precision":"&#181;m",
-    "Pulse Width":"ns",
-    "Repetition Rate":"kHz",
-    "Wavelength":"nm"
-};
-
 var input_validation_map = {
     "ACTIVE_AREA":{
-	    "pattern": "pattern='.{6,}'",
+	    "pattern": "placeholder='mm'",
 	    "val_message": "This is a validation message for ActiveArea",
 		"unit_of_measurement":"mm"
 	},
     "ACTIVE_AREA_DIAMETER":{ // aka Aperture Size
-	    "pattern": "pattern='.{6,}'",
+	    "pattern": "placeholder='mm'",
 	    "val_message": "This is a validation message for Aperture Size",
 		"unit_of_measurement":"mm"
 	},
+    "APPLICATIONS":{
+    	"pattern": "",
+    	"val_message": "This is a validation message for APPLICATIONS",
+		"unit_of_measurement":""
+    },
     "BEAM_DIAMETER":{
-    	"pattern": "pattern='^[+]?[0-9]+\.[0-9]+$'", // matches floating numbers
+    	"pattern": "pattern='^[+]?[0-9]+\.[0-9]+$' placeholder='mm'", // matches floating numbers
     	"val_message": "Must be a positive decimal number",
 		"unit_of_measurement":"mm"
 	},
-    "UNCERTAINTY":{
-    	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Calibration Uncertainty",
-		"unit_of_measurement":"%"
-    },
     "COOLING_METHOD":{
-    	"pattern": "pattern='.{6,}'",
+    	"pattern": "placeholder='mm'",
     	"val_message": "This is a validation message for Cooling Width",
 		"unit_of_measurement":"mm"
     },
-    "PULSE_WIDTH":{
-    	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Pulse Width",
-		"unit_of_measurement":"ns"
-    },
     "MATERIAL_THICKNESS":{
-    	"pattern": "pattern='.{6,}'",
+    	"pattern": "placeholder='mm'",
     	"val_message": "This is a validation message for Material Thickness",
 		"unit_of_measurement":"mm"
     },
     "MAX_ENERGY":{
-    	"pattern": "pattern='.{6,}'",
+    	"pattern": "placeholder='J'",
     	"val_message": "This is a validation message for Max Energy",
 		"unit_of_measurement":"J"
     },
     "MAX_POWER":{
-    	"pattern": "pattern='.{6,}'",
+    	"pattern": "placeholder='mW'",
     	"val_message": "This is a validation message for Max Power",
 		"unit_of_measurement":"mW"
     },
     "MAX_WORK_AREA":{
-    	"pattern": "pattern='.{6,}'",
+    	"pattern": "placeholder='in/mm'",
     	"val_message": "This is a validation message for Max Work Area",
 		"unit_of_measurement":"in/mm"
     },
-    "MIN_ENERGY":{
-    	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Min Energy",
-		"unit_of_measurement":"J"
-    },
-    "POWER_MIN":{
-    	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Min Power",
-		"unit_of_measurement":"mW"
-    },
-    "POWER_MAX":{
-    	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Min Power",
-		"unit_of_measurement":"mW"
-    },	
-    "PIXEL_SIZE":{
-    	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Pixel Size",
-		"unit_of_measurement":"&#181;m"
-    },
-    "POWER":{
-    	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Power",
-		"unit_of_measurement":"mW"
-    },
-    "PRECISION":{
-    	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Precision",
-		"unit_of_measurement":"&#181;m"
-    },
-    "PULSE_WIDTH_MAX":{
-    	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Pulse Width",
-		"unit_of_measurement":"&#181;m"
-    },
-    "REPETITION_RATE_MAX":{
-    	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Repetition Rate",
-		"unit_of_measurement":"kHz"
-    },
-    "WAVELENGTH":{
-    	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for Wavelength",
-		"unit_of_measurement":"nm"
-    },
-    "PC_INTERFACE":{
-    	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for PC_INTERFACE",
-		"unit_of_measurement":""
-    },
     "MEASUREMENT_TYPE":{
-    	"pattern": "pattern='.{6,}'",
+    	"pattern": "",
     	"val_message": "This is a validation message for MEASUREMENT_TYPE",
 		"unit_of_measurement":""
     },
-    "PULSE_CW":{
-    	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for PULSE_CW",
-		"unit_of_measurement":"ns"
-    }
-	,
-    "TECHNOLOGY":{
-    	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for PULSE_CW",
-		"unit_of_measurement":"ns"
+    "MIN_ENERGY":{
+    	"pattern": "placeholder='J'",
+    	"val_message": "This is a validation message for Min Energy",
+		"unit_of_measurement":"J"
+    },
+    "MOTION_TYPE":{
+    	"pattern": "",
+    	"val_message": "This is a validation message for OPERATIONMODE",
+		"unit_of_measurement":""
     },
     "Name":{
-    	"pattern": "pattern='.{6,}'",
+    	"pattern": "",
     	"val_message": "",
 		"unit_of_measurement":""
     },
     "OPERATIONMODE":{
-    	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for OPERATIONMODE",
+    	"pattern": "",
+    	"val_message": "",
 		"unit_of_measurement":""
     },
-    "APPLICATIONS":{
-    	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for APPLICATIONS",
+    "PC_INTERFACE":{
+    	"pattern": "",
+    	"val_message": "This is a validation message for PC_INTERFACE",
 		"unit_of_measurement":""
-    }
-	,
-    "MOTION_TYPE":{
-    	"pattern": "pattern='.{6,}'",
-    	"val_message": "This is a validation message for OPERATIONMODE",
-		"unit_of_measurement":""
-    }
+    },
+    "PIXEL_SIZE":{
+    	"pattern": "placeholder='&#181;m'",
+    	"val_message": "This is a validation message for Pixel Size",
+		"unit_of_measurement":"&#181;m"
+    },
+    "POWER":{
+    	"pattern": "pattern='^[+]?[0-9]+\.[0-9]+$' placeholder='mW'",
+    	"val_message": "Must be a positive decimal number",
+		"unit_of_measurement":"mW"
+    },
+    "POWER_MAX":{
+    	"pattern": "placeholder='mW'",
+    	"val_message": "This is a validation message for Min Power",
+		"unit_of_measurement":"mW"
+    },
+    "POWER_MIN":{
+    	"pattern": "placeholder='mW'",
+    	"val_message": "This is a validation message for Min Power",
+		"unit_of_measurement":"mW"
+    },	
+    "PRECISION":{
+    	"pattern": "placeholder='&#181;m'",
+    	"val_message": "This is a validation message for Precision",
+		"unit_of_measurement":"&#181;m"
+    },
+    "PULSE_CW":{
+    	"pattern": "placeholder='ns'",
+    	"val_message": "This is a validation message for PULSE_CW",
+		"unit_of_measurement":"ns"
+    },
+    "PULSE_WIDTH":{
+    	"pattern": "placeholder='ns'",
+    	"val_message": "This is a validation message for Pulse Width",
+		"unit_of_measurement":"ns"
+    },
+    "PULSE_WIDTH_MAX":{
+    	"pattern": "placeholder='&#181;m'",
+    	"val_message": "This is a validation message for Pulse Width",
+		"unit_of_measurement":"&#181;m"
+    },
+    "REPETITION_RATE_MAX":{
+    	"pattern": "placeholder='kHz'",
+    	"val_message": "This is a validation message for Repetition Rate",
+		"unit_of_measurement":"kHz"
+    },
+    "TECHNOLOGY":{
+    	"pattern": "",
+    	"val_message": "This is a validation message for PULSE_CW",
+		"unit_of_measurement":"ns"
+    },
+    "UNCERTAINTY":{
+    	"pattern": "placeholder='%'",
+    	"val_message": "This is a validation message for Calibration Uncertainty",
+		"unit_of_measurement":"%"
+    },
+    "WAVELENGTH":{
+    	"pattern": "placeholder='nm'",
+    	"val_message": "This is a validation message for Wavelength",
+		"unit_of_measurement":"nm"
+    },
 }
 
 function makeTable() {
@@ -258,14 +235,15 @@ function bind_edit_form_inputs(id){
 }
 
 function load_product(id){
-	$.post( "/api/?action=get-product-detail",{id:id}, function( json ) {
+	$.post("/api/?action=get-product-detail",{id:id}, function( json ){
 		// Ensures that Modified Datetime is at the top of the form
 		edit_data.push({
 			"specs" :"<span>Last Modified</span>",
 			"html" : '<td><span>'+json.Modified_Datetime +'</span></td>'
 		});		
-		
-		$.each( json, function( key, value ) {
+
+		$.each( json, function( key, value ) { 
+			
 			key_array = key.split("_");
 			var full_label = '';
 		
@@ -280,86 +258,91 @@ function load_product(id){
 			}
 
 			spec_name = "spec_" + key;
-
-			if(typeof input_validation_map[full_label.trim()] !== "undefined"){
-				// Determine input pattern based on label name.
-				var input_pattern = input_validation_map[full_label.trim()]["pattern"];
-				// Determine input validation message based on label name.
-				var input_val_message = input_validation_map[full_label.trim()]["val_message"];
-			}
+			spec_name_uom = spec_name + "_uom";
 			
 			if(key.trim() == "OPERATIONMODE"){
 				full_label = "Mode";	
 			}
 
-			if( value === 'undefined' || (typeof value === 'undefined') || value == 'null'){
+			if(value === 'undefined' || (typeof value === 'undefined') || value == 'null'){
 				value = '';
 			}
+			
+		
+			
+			if(typeof input_validation_map[key.trim()] !== "undefined"){
+				// Determine input pattern based on key name.
+				var input_pattern = input_validation_map[key.trim()]["pattern"] == "" ? "" : input_validation_map[key.trim()]["pattern"];
 
-			//if( field_name_array.indexOf( key.trim()) >= 0 ){
-			if( typeof input_validation_map[key.trim()] !== "undefined" ){
-				switch( key.trim() ){
+				// Determine input validation message based on key name.
+				var input_val_message = input_validation_map[key.trim()]["val_message"] == "" ? "" : input_validation_map[key.trim()]["val_message"];
+
+				// Determine input unit of measurement based on key name.
+				var input_unit_of_meas = input_validation_map[key.trim()]["unit_of_measurement"] == "" ? "" : '&nbsp;&nbsp;( ' + input_validation_map[key.trim()]["unit_of_measurement"] + ' )';
+
+				switch(key.trim()){
 					case "TECHNOLOGY":
-						input_html = '<td><select class="spec_input" name="' + spec_name + '" id="' + spec_name + '"><option selected>'+value+'</option><option>Ultrafast Oscillators</option><option>DPSS</option></select></td>';
+						input_html = '<td><select class="spec_input" name="' + spec_name + '" id="' + spec_name + '"><option selected>'+value.Product_Attribute_Value+'</option><option>Ultrafast Oscillators</option><option>DPSS</option></select></td>';
 						break;
 					case "WAVELENGTH":
 						input_html = '<td><select class="spec_input" name="' + spec_name + '" id="' + spec_name + '">';
-						input_html  += '<option selected>'+ value +'</option><option>Deep UV</option><option>UV - Visible</option><option>UV</option><option>Violet</option>';
-						input_html += '</select></td>';
+						input_html  += '<option selected>'+ value.Product_Attribute_Value +'</option><option>Deep UV</option><option>UV - Visible</option><option>UV</option><option>Violet</option></select>';	
+						input_html += '</td>';
 						break;
 					case "Name":
 						input_html = '<td><span>' + value + '</span></td>';
 						break;
+					case "POWER":
+					case "PULSE_WIDTH":
+					case "REPETION_RATE":
+					case "ENERGY":
+						if( key.trim() == "POWER" ){
+							uom_array = ["mW","W","kW"];
+						}else if( key.trim() == "PULSE_WIDTH" ){
+							uom_array = ["fs","ps","ns","us","ms","cw"];
+						}else if( key.trim() == "REPETION_RATE" ){
+							uom_array = ["Hz","kHz","MHz"];
+						}else if( key.trim() == "ENERGY" ){
+							uom_array = ["micro_J","mJ","J"];
+						}
+						
+						//if( value.Product_Attribute_Value === 'undefined' ){
+						if(value.Product_Attribute_Value === 'undefined' || (typeof value.Product_Attribute_Value === 'undefined') || value.Product_Attribute_Value == 'null'){
+							prod_attribute_value = "";
+						}else{
+							prod_attribute_value = value.Product_Attribute_Value;
+						}
+						input_html = '<td><input class="spec_input" type="text" value="' + prod_attribute_value + '" name="' + spec_name + '" id="'+ spec_name +'">';
+						input_html += '<select class="spec_input" name="' + spec_name_uom + '" id="' + spec_name_uom + '">';
+
+						for (var i = 0; i < uom_array.length; i++) {
+							if( value.Unit_Measurement == uom_array[i] ){
+								input_html += '<option selected>' + uom_array[i] + '</option>';
+							}else{
+								input_html += '<option>' + uom_array[i] + '</option>';
+							}
+						}
+						//input_html  += '<option selected>mW</option><option>W</option><option>kW</option></select>';	
+						input_html += '</td>';
+						break;
+											
 					default:
-						input_html = '<td><input type="text"' + input_pattern + 'value="' + value + '" class="spec_input" name="' + spec_name + '" id="' + spec_name + '"><div class="val_message">' + input_val_message + '</div></td>';
+						input_html = '<td><input type="text"' + input_pattern + 'value="' + value.Product_Attribute_Value + '" class="spec_input" name="' + spec_name + '" id="' + spec_name + '"><div class="val_message">' + input_val_message + '</div></td>';
 						break
 				}
 				
-				// Determine unit of measurement based on label name.
-				var unit_of_meas = typeof units_of_measurement_map[full_label.trim()] === "undefined" ? "" : '&nbsp;&nbsp;( ' + units_of_measurement_map[full_label.trim()] + ' )';
-				
 				edit_data.push({
-                "specs" :"<span>" + full_label + " " + unit_of_meas + "</span>",
+                "specs" :"<span>" + full_label + " " + input_unit_of_meas + "</span>",
                 "html" : input_html
 				});
 			}
-
-			/*
-			if( key.trim() == "Created_Datetime" || key.trim() == "Modified_Datetime" || key.trim() == "ID"){
-				input_html = '<td><span>'+value+'</span></td>';
-			}else if( key.trim() == "Show_On_Nav" ){
-				if( value == 1){
-					input_html = '<td><input type="radio" class="spec_input" value="'+ value + '" name="' + spec_name + '" checked> <label for="' + spec_name + '">Yes</label>';
-					input_html += '<input type="radio" class="spec_input" value="'+ value + '" name="' + spec_name + '"><label for="' + spec_name + '">No</label></td>';
-				}else{
-					input_html = '<td><input type="radio" class="spec_input" value="'+ value + '" name="' + spec_name + '"> Yes';
-					input_html += '<input type="radio" class="spec_input" value="'+ value + '" name="' + spec_name + '" checked> No</td>';
-				}
-			}else if( key.trim() == "Description"){
-				input_html = '<td><textarea class="spec_input" name="' + spec_name + '" id="' + spec_name + '">'+value+'</textarea></td>';
-				$('#' + spec_name +'').val(value);
-			}else if( key.trim() == "TECHNOLOGY" ){
-				input_html = '<td>';
-				input_html += '<select><option>Ultrafast Oscillators</option><option>DPSS</option></select>';
-				//input_html += '<input type="text" class="spec_input" value="'+ value + '" name="' + spec_name + '" id="' + spec_name + '">';
-				input_html += '</td>';
-			}else{
-				input_html = '<td><input type="text" class="spec_input" value="'+ value + '" name="' + spec_name + '" id="' + spec_name + '"></td>';
-			}
-						
-			var unit_of_meas = typeof units_of_measurement_map[full_label.trim()] === "undefined" ? "" : '&nbsp;&nbsp;( ' + units_of_measurement_map[full_label.trim()] + ' )';
-
-			edit_data.push({
-                "specs" :"<span>" + full_label + " " + unit_of_meas + "</span>",
-                "html" : input_html
-			});
-			*/
 		});
 		
 		makeTable();
-		bind_edit_form_inputs(id);	
+
+		bind_edit_form_inputs(id);
+
 		$('.submit_edit').show();
-			
 	},"json");
 }
 
@@ -368,7 +351,7 @@ $(document).ready(function () {
 
 	id = getUrlVars()["id"];
 
-	if( id !== 'undefined'){ console.log(id);
+	if(id !== 'undefined'){ console.log(id);
 		load_product(id);
 	}
 })
